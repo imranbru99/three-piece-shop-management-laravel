@@ -19,7 +19,7 @@
         "imrandevbd/laravel-unicode-pdf": "dev-main",
         "imrandevbd/laravel-universal-slug": "dev-main",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^3.0.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
