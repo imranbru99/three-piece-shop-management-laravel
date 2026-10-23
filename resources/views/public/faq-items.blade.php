@@ -1,0 +1,1 @@
+@foreach(array_slice($faqs,0,$limit ?? count($faqs)) as $faq)<details class="faq-item"><summary>{{ $faq['q'][app()->getLocale()] }}<span>+</span></summary><p>{{ $faq['a'][app()->getLocale()] }}</p></details>@endforeach

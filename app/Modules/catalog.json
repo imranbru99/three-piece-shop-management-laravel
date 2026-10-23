@@ -1,0 +1,661 @@
+{
+  "core": {
+    "key": "core",
+    "name": {
+      "en": "Business essentials",
+      "bn": "ব্যবসার ভিত্তি"
+    },
+    "description": {
+      "en": "Shop branding, staff access, branches and settings.",
+      "bn": "ব্র্যান্ডিং, কর্মী, শাখা ও সেটিংস।"
+    },
+    "group": "People",
+    "features": [
+      "Shop profile and branding",
+      "Staff roles and permissions",
+      "Branches and business settings",
+      "Media, imports and audit history"
+    ],
+    "depends_on": [],
+    "locked": true,
+    "status": "partial",
+    "feature_bn": [
+      "দোকানের পরিচিতি ও ব্র্যান্ডিং",
+      "কর্মীদের ভূমিকা ও অনুমতি",
+      "শাখা ও ব্যবসার সেটিংস",
+      "মিডিয়া, আমদানি ও পরিবর্তনের ইতিহাস"
+    ]
+  },
+  "catalog": {
+    "key": "catalog",
+    "name": {
+      "en": "Product catalog",
+      "bn": "পণ্যের ক্যাটালগ"
+    },
+    "description": {
+      "en": "Every fabric, color and size. Beautifully organized.",
+      "bn": "সব কাপড়, রং ও মাপ একসাথে।"
+    },
+    "group": "Sell",
+    "features": [
+      "Unstitched, ready-made and custom-stitch forms",
+      "Color and size variants with SKUs",
+      "Fabric, work, origin and occasion attributes",
+      "AI drafts, review and bilingual publishing"
+    ],
+    "depends_on": [],
+    "locked": true,
+    "status": "partial",
+    "feature_bn": [
+      "আনস্টিচড, রেডিমেড ও কাস্টম সেলাই",
+      "রং ও মাপ অনুযায়ী SKU",
+      "কাপড়, কাজ, উৎস ও অনুষ্ঠানের তথ্য",
+      "এআই খসড়া, পর্যালোচনা ও দুই ভাষায় প্রকাশ"
+    ]
+  },
+  "orders": {
+    "key": "orders",
+    "name": {
+      "en": "Order management",
+      "bn": "অর্ডার পরিচালনা"
+    },
+    "description": {
+      "en": "One home for orders from every sales channel.",
+      "bn": "সব চ্যানেলের অর্ডার এক জায়গায়।"
+    },
+    "group": "Sell",
+    "features": [
+      "Unified order list and channel filters",
+      "Pending-to-delivered workflow",
+      "Customer details and order timeline",
+      "Invoices, notes and bulk actions"
+    ],
+    "depends_on": [],
+    "locked": true,
+    "status": "partial",
+    "feature_bn": [
+      "একটি তালিকায় সব চ্যানেলের অর্ডার",
+      "অপেক্ষমাণ থেকে ডেলিভারি পর্যন্ত ধাপ",
+      "ক্রেতার তথ্য ও অর্ডারের ইতিহাস",
+      "ইনভয়েস, নোট ও একসাথে কাজ"
+    ]
+  },
+  "customers": {
+    "key": "customers",
+    "name": {
+      "en": "Customer directory",
+      "bn": "ক্রেতার তথ্য"
+    },
+    "description": {
+      "en": "Remember the people behind every purchase.",
+      "bn": "প্রতিটি ক্রেতার তথ্য রাখুন।"
+    },
+    "group": "People",
+    "features": [
+      "Phone-based customer profiles",
+      "Addresses and purchase history",
+      "Customer notes and groups",
+      "Measurements and preferences"
+    ],
+    "depends_on": [],
+    "locked": true,
+    "status": "partial",
+    "feature_bn": [
+      "ফোন অনুযায়ী ক্রেতার পরিচিতি",
+      "ঠিকানা ও কেনাকাটার ইতিহাস",
+      "ক্রেতার নোট ও দল",
+      "মাপ ও পছন্দের তথ্য"
+    ]
+  },
+  "inventory": {
+    "key": "inventory",
+    "name": {
+      "en": "Inventory",
+      "bn": "মজুদ"
+    },
+    "description": {
+      "en": "Know what is available, and where it lives.",
+      "bn": "কোথায় কত মজুদ আছে জানুন।"
+    },
+    "group": "Stock",
+    "features": [
+      "Stock movements and on-hand balances",
+      "Multi-location transfers and stocktake",
+      "Low-stock alerts and reorder levels",
+      "Batches, fabric lengths and reservations"
+    ],
+    "depends_on": [
+      "catalog"
+    ],
+    "locked": false,
+    "status": "partial",
+    "feature_bn": [
+      "মজুদের পরিবর্তন ও বর্তমান হিসাব",
+      "একাধিক স্থানে স্থানান্তর ও গণনা",
+      "কম মজুদ ও পুনরায় কেনার সংকেত",
+      "ব্যাচ, কাপড়ের দৈর্ঘ্য ও সংরক্ষিত মজুদ"
+    ]
+  },
+  "purchasing": {
+    "key": "purchasing",
+    "name": {
+      "en": "Purchasing",
+      "bn": "ক্রয়"
+    },
+    "description": {
+      "en": "From supplier order to stock on your shelves.",
+      "bn": "সরবরাহকারীর অর্ডার থেকে দোকানের মজুদ।"
+    },
+    "group": "Stock",
+    "features": [
+      "Suppliers and purchase orders",
+      "Goods receipts and purchase returns",
+      "Freight, customs and landed cost",
+      "Supplier balances and payments"
+    ],
+    "depends_on": [
+      "inventory"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "সরবরাহকারী ও ক্রয় অর্ডার",
+      "পণ্য গ্রহণ ও ক্রয় ফেরত",
+      "পরিবহন, শুল্ক ও মোট ক্রয় খরচ",
+      "সরবরাহকারীর বাকি ও পেমেন্ট"
+    ]
+  },
+  "pos": {
+    "key": "pos",
+    "name": {
+      "en": "Point of sale",
+      "bn": "বিক্রয় কাউন্টার"
+    },
+    "description": {
+      "en": "A calmer counter. A quicker checkout.",
+      "bn": "সহজ কাউন্টার, দ্রুত বিক্রয়।"
+    },
+    "group": "Sell",
+    "features": [
+      "Product search and touch-friendly cart",
+      "Cash, bKash and split payments",
+      "Cashier shifts and drawer reconciliation",
+      "Receipts, held carts and exchanges"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "partial",
+    "feature_bn": [
+      "পণ্য খোঁজা ও স্পর্শ উপযোগী কার্ট",
+      "নগদ, বিকাশ ও ভাগ করা পেমেন্ট",
+      "ক্যাশিয়ারের শিফট ও নগদ মিলানো",
+      "রসিদ, স্থগিত কার্ট ও পরিবর্তন"
+    ]
+  },
+  "storefront": {
+    "key": "storefront",
+    "name": {
+      "en": "Online storefront",
+      "bn": "অনলাইন দোকান"
+    },
+    "description": {
+      "en": "Give your collection a place of its own.",
+      "bn": "আপনার কালেকশনের নিজস্ব ঠিকানা।"
+    },
+    "group": "Sell",
+    "features": [
+      "Responsive product and collection pages",
+      "Guest checkout with COD",
+      "Phone and order-number tracking",
+      "SEO, size advice and customer accounts"
+    ],
+    "depends_on": [
+      "catalog",
+      "orders"
+    ],
+    "locked": false,
+    "status": "partial",
+    "feature_bn": [
+      "মোবাইল উপযোগী পণ্য ও কালেকশন পেজ",
+      "অতিথি চেকআউট ও ক্যাশ অন ডেলিভারি",
+      "ফোন ও অর্ডার নম্বর দিয়ে খবর",
+      "এসইও, মাপের পরামর্শ ও ক্রেতার অ্যাকাউন্ট"
+    ]
+  },
+  "landing_pages": {
+    "key": "landing_pages",
+    "name": {
+      "en": "Campaign pages",
+      "bn": "ক্যাম্পেইন পেজ"
+    },
+    "description": {
+      "en": "Turn a product story into an order.",
+      "bn": "পণ্যের গল্প থেকে অর্ডার।"
+    },
+    "group": "Grow",
+    "features": [
+      "Campaign templates and block editing",
+      "One-page product order form",
+      "Delivery zones and UTM attribution",
+      "Incomplete-order capture and conversion reports"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "ক্যাম্পেইন টেমপ্লেট ও ব্লক সম্পাদনা",
+      "এক পেজে অর্ডার ফর্ম",
+      "ডেলিভারি এলাকা ও প্রচারের উৎস",
+      "অসম্পূর্ণ অর্ডার ও রূপান্তরের হিসাব"
+    ]
+  },
+  "order_confirmation": {
+    "key": "order_confirmation",
+    "name": {
+      "en": "Pending order desk",
+      "bn": "অর্ডার নিশ্চিতকরণ"
+    },
+    "description": {
+      "en": "Give every new order the right attention.",
+      "bn": "প্রতিটি নতুন অর্ডারের সঠিক যত্ন।"
+    },
+    "group": "Fulfil",
+    "features": [
+      "Agent assignment and call notes",
+      "Confirm, hold or cancel with reasons",
+      "Duplicate and high-value COD flags",
+      "SLA reminders and agent performance"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "partial",
+    "feature_bn": [
+      "প্রতিনিধি বণ্টন ও কলের নোট",
+      "কারণসহ নিশ্চিত, স্থগিত বা বাতিল",
+      "একই ও ঝুঁকিপূর্ণ COD অর্ডারের সংকেত",
+      "সময়সীমা ও কর্মীর কাজের হিসাব"
+    ]
+  },
+  "courier": {
+    "key": "courier",
+    "name": {
+      "en": "Courier & delivery",
+      "bn": "কুরিয়ার ও ডেলিভারি"
+    },
+    "description": {
+      "en": "A clear journey from packed to delivered.",
+      "bn": "প্যাকিং থেকে ডেলিভারি পর্যন্ত পরিষ্কার তথ্য।"
+    },
+    "group": "Fulfil",
+    "features": [
+      "Shipment booking and tracking",
+      "Pathao, Steadfast, RedX, eCourier, Paperfly adapters",
+      "COD collection reconciliation",
+      "Delivery performance and return-to-origin"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "পার্সেল বুকিং ও খবর",
+      "পাঠাও, স্টেডফাস্ট, রেডএক্স, ইকুরিয়ার ও পেপারফ্লাই",
+      "ক্যাশ অন ডেলিভারির টাকা মিলানো",
+      "ডেলিভারির ফল ও ফেরত পার্সেল"
+    ]
+  },
+  "payments": {
+    "key": "payments",
+    "name": {
+      "en": "Payments",
+      "bn": "পেমেন্ট"
+    },
+    "description": {
+      "en": "Cash, mobile money and dues in one view.",
+      "bn": "নগদ, মোবাইল পেমেন্ট ও বাকি একসাথে।"
+    },
+    "group": "Money",
+    "features": [
+      "Cash, COD and manual MFS verification",
+      "Partial and advance payments",
+      "Refunds and payment ledger",
+      "Signed, idempotent gateway webhooks"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "partial",
+    "feature_bn": [
+      "নগদ, COD ও মোবাইল পেমেন্ট যাচাই",
+      "আংশিক ও অগ্রিম পেমেন্ট",
+      "ফেরত টাকা ও পেমেন্ট খতিয়ান",
+      "স্বাক্ষরিত ও পুনরাবৃত্তি সুরক্ষিত ওয়েবহুক"
+    ]
+  },
+  "returns": {
+    "key": "returns",
+    "name": {
+      "en": "Returns & exchanges",
+      "bn": "ফেরত ও পরিবর্তন"
+    },
+    "description": {
+      "en": "Handle the next conversation with confidence.",
+      "bn": "ফেরত ও পরিবর্তন সামলান সহজে।"
+    },
+    "group": "Fulfil",
+    "features": [
+      "Return requests and reason tracking",
+      "QC, restock or write-off decisions",
+      "Exchanges with price differences",
+      "Cash, MFS or store-credit refunds"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "ফেরতের অনুরোধ ও কারণ",
+      "মান যাচাই, মজুদে ফেরত বা বাদ",
+      "দামের পার্থক্যসহ পণ্য বদল",
+      "নগদ, মোবাইল বা দোকানের ক্রেডিটে ফেরত"
+    ]
+  },
+  "wholesale": {
+    "key": "wholesale",
+    "name": {
+      "en": "Wholesale",
+      "bn": "পাইকারি"
+    },
+    "description": {
+      "en": "Built for buyers who buy by the bundle.",
+      "bn": "বড় ক্রেতা ও বড় অর্ডারের জন্য।"
+    },
+    "group": "Sell",
+    "features": [
+      "Wholesale tiers and minimum quantities",
+      "Approved buyer accounts and quotations",
+      "Credit limits and due ledgers",
+      "Carton orders and reseller price lists"
+    ],
+    "depends_on": [
+      "catalog",
+      "orders"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "পাইকারি দামের ধাপ ও ন্যূনতম পরিমাণ",
+      "অনুমোদিত ক্রেতা ও কোটেশন",
+      "বাকির সীমা ও খতিয়ান",
+      "কার্টন অর্ডার ও রিসেলার মূল্যতালিকা"
+    ]
+  },
+  "production": {
+    "key": "production",
+    "name": {
+      "en": "Tailoring & production",
+      "bn": "সেলাই ও উৎপাদন"
+    },
+    "description": {
+      "en": "From a measurement to a finished piece.",
+      "bn": "মাপ থেকে তৈরি পোশাক।"
+    },
+    "group": "Stock",
+    "features": [
+      "Customer measurement profiles",
+      "Bills of materials and fabric issue",
+      "Cutting, stitching, finishing and QC",
+      "Job cards and piece-rate wages"
+    ],
+    "depends_on": [
+      "inventory",
+      "orders"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "ক্রেতার মাপের পরিচিতি",
+      "উপকরণের তালিকা ও কাপড় ছাড়া",
+      "কাটিং, সেলাই, ফিনিশিং ও মান যাচাই",
+      "কাজের কার্ড ও পিস অনুযায়ী মজুরি"
+    ]
+  },
+  "crm": {
+    "key": "crm",
+    "name": {
+      "en": "Customer relationships",
+      "bn": "ক্রেতা সম্পর্ক"
+    },
+    "description": {
+      "en": "Give your regulars a reason to return.",
+      "bn": "নিয়মিত ক্রেতাদের সাথে সম্পর্ক রাখুন।"
+    },
+    "group": "People",
+    "features": [
+      "Loyalty points and tiers",
+      "Store credit and customer dues",
+      "VIP and dormant customer segments",
+      "Follow-ups and occasion reminders"
+    ],
+    "depends_on": [
+      "customers"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "লয়্যালটি পয়েন্ট ও স্তর",
+      "স্টোর ক্রেডিট ও ক্রেতার বাকি",
+      "নিয়মিত ও নিষ্ক্রিয় ক্রেতার দল",
+      "ফলোআপ ও বিশেষ দিনের স্মরণ"
+    ]
+  },
+  "marketing": {
+    "key": "marketing",
+    "name": {
+      "en": "Marketing",
+      "bn": "বিপণন"
+    },
+    "description": {
+      "en": "Plan the campaign. Understand the result.",
+      "bn": "ক্যাম্পেইন পরিকল্পনা করুন, ফল জানুন।"
+    },
+    "group": "Grow",
+    "features": [
+      "Coupons, flash sales and bundles",
+      "Segmented campaigns and recovery",
+      "Product feeds and conversion events",
+      "AI captions, scripts and campaign ROI"
+    ],
+    "depends_on": [
+      "catalog",
+      "customers"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "কুপন, ফ্ল্যাশ সেল ও বান্ডেল",
+      "দলভিত্তিক প্রচার ও অর্ডার পুনরুদ্ধার",
+      "প্রোডাক্ট ফিড ও রূপান্তরের তথ্য",
+      "এআই ক্যাপশন, স্ক্রিপ্ট ও প্রচারের লাভ"
+    ]
+  },
+  "accounts": {
+    "key": "accounts",
+    "name": {
+      "en": "Accounts",
+      "bn": "হিসাব"
+    },
+    "description": {
+      "en": "Keep the numbers as clear as your vision.",
+      "bn": "ব্যবসার হিসাব রাখুন পরিষ্কার।"
+    },
+    "group": "Money",
+    "features": [
+      "Cash, bank and MFS accounts",
+      "Double-entry journals and expenses",
+      "Profit and loss, balance sheet and cash flow",
+      "Trial balance, VAT and period closing"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "partial",
+    "feature_bn": [
+      "নগদ, ব্যাংক ও মোবাইল হিসাব",
+      "দুই দাখিলার জাবেদা ও খরচ",
+      "লাভ-ক্ষতি, স্থিতিপত্র ও নগদ প্রবাহ",
+      "রেওয়ামিল, ভ্যাট ও হিসাব বন্ধ"
+    ]
+  },
+  "hr": {
+    "key": "hr",
+    "name": {
+      "en": "People & payroll",
+      "bn": "কর্মী ও বেতন"
+    },
+    "description": {
+      "en": "Look after the team behind your business.",
+      "bn": "ব্যবসার পেছনের দলটির যত্ন নিন।"
+    },
+    "group": "People",
+    "features": [
+      "Employees, shifts, leave and holidays",
+      "Device, ADMS, GPS and QR attendance",
+      "Salary, advances and commissions",
+      "Payroll with overtime and piece-rate wages"
+    ],
+    "depends_on": [],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "কর্মী, শিফট, ছুটি ও বন্ধের দিন",
+      "ডিভাইস, ADMS, GPS ও QR হাজিরা",
+      "বেতন, অগ্রিম ও কমিশন",
+      "অতিরিক্ত সময় ও পিস মজুরিসহ বেতন"
+    ]
+  },
+  "reports": {
+    "key": "reports",
+    "name": {
+      "en": "Business reports",
+      "bn": "ব্যবসার প্রতিবেদন"
+    },
+    "description": {
+      "en": "See the story behind every number.",
+      "bn": "প্রতিটি সংখ্যার পেছনের গল্প জানুন।"
+    },
+    "group": "Money",
+    "features": [
+      "Sales by channel, fabric, size and district",
+      "Margins, valuation and stock aging",
+      "Delivery success and COD pending",
+      "CSV, Excel, PDF and scheduled summaries"
+    ],
+    "depends_on": [
+      "orders"
+    ],
+    "locked": false,
+    "status": "partial",
+    "feature_bn": [
+      "চ্যানেল, কাপড়, মাপ ও জেলায় বিক্রয়",
+      "লাভ, মজুদের মূল্য ও বয়স",
+      "ডেলিভারি সফলতা ও বাকি COD",
+      "CSV, এক্সেল, PDF ও নির্ধারিত সারাংশ"
+    ]
+  },
+  "insights": {
+    "key": "insights",
+    "name": {
+      "en": "Insights",
+      "bn": "ইনসাইটস"
+    },
+    "description": {
+      "en": "A shared view of what matters today.",
+      "bn": "আজকের গুরুত্বপূর্ণ বিষয় এক নজরে।"
+    },
+    "group": "Grow",
+    "features": [
+      "Executive widget dashboard",
+      "Order Kanban and delivery calendar",
+      "Natural-language business questions",
+      "System health and tamper-evident audit"
+    ],
+    "depends_on": [
+      "reports"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "ব্যবসার গুরুত্বপূর্ণ তথ্যের ড্যাশবোর্ড",
+      "অর্ডারের বোর্ড ও ডেলিভারি ক্যালেন্ডার",
+      "সহজ ভাষায় ব্যবসার প্রশ্ন",
+      "সিস্টেমের অবস্থা ও নিরাপদ পরিবর্তনের ইতিহাস"
+    ]
+  },
+  "ai": {
+    "key": "ai",
+    "name": {
+      "en": "AI assistant",
+      "bn": "এআই সহকারী"
+    },
+    "description": {
+      "en": "A helping hand for the work that adds up.",
+      "bn": "দৈনন্দিন কাজে সহায়ক।"
+    },
+    "group": "AI",
+    "features": [
+      "Conversation-to-order drafts",
+      "Bilingual copy and reply suggestions",
+      "Size, price and reorder advice",
+      "Visible per-shop monthly AI budgets"
+    ],
+    "depends_on": [
+      "catalog"
+    ],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "কথোপকথন থেকে অর্ডারের খসড়া",
+      "দুই ভাষায় লেখা ও উত্তরের পরামর্শ",
+      "মাপ, দাম ও মজুদের পরামর্শ",
+      "প্রতি দোকানের মাসিক এআই বাজেট"
+    ]
+  },
+  "integrations": {
+    "key": "integrations",
+    "name": {
+      "en": "Integrations",
+      "bn": "ইন্টিগ্রেশন"
+    },
+    "description": {
+      "en": "Connect your workflows, on your terms.",
+      "bn": "আপনার মতো করে কাজ সংযুক্ত করুন।"
+    },
+    "group": "Grow",
+    "features": [
+      "Scoped REST APIs and tokens",
+      "Signed webhooks with retry logs",
+      "CSV and Excel imports",
+      "Data export, backups and usage logs"
+    ],
+    "depends_on": [],
+    "locked": false,
+    "status": "planned",
+    "feature_bn": [
+      "অনুমতিসহ REST API ও টোকেন",
+      "স্বাক্ষরিত ওয়েবহুক ও পুনরায় চেষ্টা",
+      "CSV ও এক্সেল আমদানি",
+      "তথ্য এক্সপোর্ট, ব্যাকআপ ও ব্যবহারের হিসাব"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+name: Quality
+on:
+  push:
+  pull_request:
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: three_piece_test
+          MYSQL_ROOT_PASSWORD: test
+        ports: [3306:3306]
+        options: --health-cmd="mysqladmin ping -ptest" --health-interval=5s --health-retries=30
+      redis:
+        image: redis:7-alpine
+        ports: [6379:6379]
+    env:
+      DB_CONNECTION: mysql
+      DB_DATABASE: three_piece_test
+      DB_HOST: 127.0.0.1
+      DB_USERNAME: root
+      DB_PASSWORD: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: bcmath, gd, intl, mbstring, pdo_mysql, redis, sockets, zip
+          coverage: none
+      - run: composer install --no-interaction --prefer-dist
+      - run: cp .env.example .env && php artisan key:generate
+      - run: php artisan migrate --force
+      - run: vendor/bin/pint --test
+      - run: vendor/bin/phpstan analyse --memory-limit=1G
+      - run: vendor/bin/pest --configuration=phpunit.mysql.xml
+      - run: php artisan docs:features --check
+      - run: composer validate --strict
+      - run: composer audit
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci && npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-build
+          path: public/build
+  semgrep:
+    runs-on: ubuntu-latest
+    container: semgrep/semgrep
+    steps:
+      - uses: actions/checkout@v4
+      - run: semgrep scan --config p/php --error app routes
